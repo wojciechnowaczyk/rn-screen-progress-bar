@@ -38,7 +38,52 @@ const App = () => {
       <StatusBar barStyle={isDarkMode ? 'light-content' : 'dark-content'} />
       <Text>Test</Text>
       <Text>Test</Text>
-      <ContentArea>
+      <ContentArea
+        backgroundColor="#a8dadc"
+        barColor="#457b9d"
+        percentage
+        percentageColor="#ffffff">
+        <Text>Test</Text>
+        <Text>Test</Text>
+        <Text>Test</Text>
+        <Text>Test</Text>
+        <Text>Test</Text>
+        <Text>Test</Text>
+        <Text>Test</Text>
+        <Text>Test</Text>
+        <Text>Test</Text>
+        <Text>Test</Text>
+        <Text>Test</Text>
+        <Text>Test</Text>
+        <Text>Test</Text>
+        <Text>Test</Text>
+        <Text>Test</Text>
+        <Text>Test</Text>
+        <Text>Test</Text>
+        <Text>Test</Text>
+        <Text>Test</Text>
+        <Text>Test</Text>
+        <Text>Test</Text>
+        <Text>Test</Text>
+        <Text>Test</Text>
+        <Text>Test</Text>
+        <Text>Test</Text>
+        <Text>Test</Text>
+        <Text>Test</Text>
+        <Text>Test</Text>
+        <Text>Test</Text>
+        <Text>Test</Text>
+        <Text>Test</Text>
+        <Text>Test</Text>
+        <Text>Test</Text>
+        <Text>Test</Text>
+        <Text>Test</Text>
+        <Text>Test</Text>
+        <Text>Test</Text>
+        <Text>Test</Text>
+        <Text>Test</Text>
+        <Text>Test</Text>
+        <Text>Test</Text>
         <Text>Test</Text>
         <Text>Test</Text>
         <Text>Test</Text>

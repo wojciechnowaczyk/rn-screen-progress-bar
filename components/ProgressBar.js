@@ -1,41 +1,45 @@
 import React, {useEffect, useState} from 'react';
-import {View, Text, Dimensions, StyleSheet} from 'react-native';
+import {View, Text, Dimensions} from 'react-native';
 
 export function ProgressBar({
   currentOffset = 0,
   componentHeight = 0,
   backgroundColor,
-  percentageVisibility,
+  barColor,
+  percentage,
+  percentageColor,
 }) {
   const screenHeight = Dimensions.get('window').height || 0;
   const [progressPercentage, setProgressPercentage] = useState(0);
   useEffect(() => {
     const calculatePercentage = () => {
       const currentPercentage =
-        ((currentOffset === 0
-          ? screenHeight
-          : currentOffset + screenHeight + 0.1) *
-          100) /
-        componentHeight;
+        componentHeight > 0
+          ? ((currentOffset === 0
+              ? screenHeight
+              : currentOffset + screenHeight + 0.1) *
+              100) /
+            componentHeight
+          : null;
       setProgressPercentage(Math.floor(currentPercentage));
     };
     calculatePercentage();
   }, [currentOffset, screenHeight]);
   return (
     <View style={progressBarBox(backgroundColor)}>
-      {percentageVisibility && (
-        <Text style={styles.percentageText}>{progressPercentage}%</Text>
+      {percentage && (
+        <Text style={percentageText(percentageColor)}>
+          {progressPercentage}%
+        </Text>
       )}
-      <View
-        style={([StyleSheet.absoluteFill], progressBar(progressPercentage))}
-      />
+      <View style={progressBar(progressPercentage, barColor)} />
     </View>
   );
 }
 
-const progressBar = progressPercentage => {
+const progressBar = (progressPercentage, barColor) => {
   return {
-    backgroundColor: '#8BED4F',
+    backgroundColor: barColor ? barColor : '#8BED4F',
     width: progressPercentage + '%',
     height: 20,
     position: 'absolute',
@@ -51,8 +55,8 @@ const progressBar = progressPercentage => {
     },
     shadowOpacity: 0.25,
     shadowRadius: 3.84,
-
     elevation: 5,
+    zIndex: 0,
   };
 };
 
@@ -60,16 +64,21 @@ const progressBarBox = backgroundColor => {
   return {
     position: 'absolute',
     top: 0,
-    zIndex: 1000001,
+    zIndex: 10001,
     width: '100%',
-    backgroundColor: backgroundColor ? backgroundColor : 'white',
+    backgroundColor: backgroundColor ? backgroundColor : 'black',
     justifyContent: 'center',
     alignItems: 'center',
+    height: 20,
   };
 };
 
-const styles = StyleSheet.create({
-  percentageText: {
-    zIndex: 100001,
-  },
-});
+const percentageText = percentageColor => {
+  return {
+    zIndex: 1000001,
+    color: percentageColor ? percentageColor : 'white',
+    fontWeight: 'bold',
+    fontSize: 15,
+    elevation: 6,
+  };
+};
