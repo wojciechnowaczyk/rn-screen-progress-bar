@@ -2,7 +2,13 @@ import React, {useState} from 'react';
 import {View, Text, ScrollView} from 'react-native';
 import {ProgressBar} from './ProgressBar';
 
-export function ContentArea({children}) {
+export function ContentArea({
+  backgroundColor,
+  barColor,
+  percentage,
+  percentageColor,
+  children,
+}) {
   const [componentHeight, setComponentHeight] = useState();
   const [currentOffset, setCurrentOffset] = useState();
   return (
@@ -10,6 +16,10 @@ export function ContentArea({children}) {
       <ProgressBar
         currentOffset={currentOffset}
         componentHeight={componentHeight}
+        backgroundColor={backgroundColor}
+        barColor={barColor}
+        percentage={percentage}
+        percentageColor={percentageColor}
       />
       <ScrollView
         onScroll={event => setCurrentOffset(event.nativeEvent.contentOffset.y)}>
