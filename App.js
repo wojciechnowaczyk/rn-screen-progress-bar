@@ -7,7 +7,7 @@
  */
 
 import React from 'react';
-import {ContentArea} from './components/ContentArea';
+import {ContentArea} from './src/components/ContentArea';
 import {
   SafeAreaView,
   ScrollView,
