@@ -22,7 +22,8 @@ export function ContentArea({
         percentageColor={percentageColor}
       />
       <ScrollView
-        onScroll={event => setCurrentOffset(event.nativeEvent.contentOffset.y)}>
+        onScroll={event => setCurrentOffset(event.nativeEvent.contentOffset.y)}
+        scrollEventThrottle={16}>
         <View
           onLayout={event =>
             setComponentHeight(event.nativeEvent.layout.height)

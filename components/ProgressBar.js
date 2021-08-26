@@ -63,7 +63,7 @@ const progressBar = (progressPercentage, barColor) => {
 const progressBarBox = backgroundColor => {
   return {
     position: 'absolute',
-    top: 0,
+    top: 20,
     zIndex: 10001,
     width: '100%',
     backgroundColor: backgroundColor ? backgroundColor : 'black',
