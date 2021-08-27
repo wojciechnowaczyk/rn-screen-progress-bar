@@ -8,6 +8,7 @@ export function ProgressBar({
   barColor,
   percentage,
   percentageColor,
+  top,
 }) {
   const screenHeight = Dimensions.get('window').height || 0;
   const [progressPercentage, setProgressPercentage] = useState(0);
@@ -26,7 +27,7 @@ export function ProgressBar({
     calculatePercentage();
   }, [currentOffset, screenHeight]);
   return (
-    <View style={progressBarBox(backgroundColor)} id="ProgressBarBox">
+    <View style={progressBarBox(backgroundColor, top)} id="ProgressBarBox">
       {percentage && (
         <Text style={percentageText(percentageColor)} id="ProgressPercentage">
           {progressPercentage > 100 ? 100 : progressPercentage}%
@@ -60,10 +61,10 @@ const progressBar = (progressPercentage, barColor) => {
   };
 };
 
-const progressBarBox = backgroundColor => {
+const progressBarBox = (backgroundColor, top) => {
   return {
     position: 'absolute',
-    top: 0,
+    top: top ? top : 0,
     zIndex: 10001,
     width: '100%',
     backgroundColor: backgroundColor ? backgroundColor : 'white',

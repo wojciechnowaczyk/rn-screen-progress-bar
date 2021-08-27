@@ -7,6 +7,7 @@ export function ContentArea({
   barColor,
   percentage,
   percentageColor,
+  top,
   children,
 }) {
   const [componentHeight, setComponentHeight] = useState();
@@ -20,9 +21,11 @@ export function ContentArea({
         barColor={barColor}
         percentage={percentage}
         percentageColor={percentageColor}
+        top={top}
       />
       <ScrollView
-        onScroll={event => setCurrentOffset(event.nativeEvent.contentOffset.y)}>
+        onScroll={event => setCurrentOffset(event.nativeEvent.contentOffset.y)}
+        scrollEventThrottle={16}>
         <View
           onLayout={event =>
             setComponentHeight(event.nativeEvent.layout.height)
