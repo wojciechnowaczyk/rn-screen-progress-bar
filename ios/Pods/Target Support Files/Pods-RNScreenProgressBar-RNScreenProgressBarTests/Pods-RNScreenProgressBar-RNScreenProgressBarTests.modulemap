@@ -1,6 +1,0 @@
-module Pods_RNScreenProgressBar_RNScreenProgressBarTests {
-  umbrella header "Pods-RNScreenProgressBar-RNScreenProgressBarTests-umbrella.h"
-
-  export *
-  module * { export * }
-}

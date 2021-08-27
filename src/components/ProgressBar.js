@@ -40,7 +40,7 @@ export function ProgressBar({
 
 const progressBar = (progressPercentage, barColor) => {
   return {
-    backgroundColor: barColor ? barColor : '#8BED4F',
+    backgroundColor: barColor ? barColor : 'black',
     width: progressPercentage + '%',
     height: 20,
     position: 'absolute',
@@ -65,7 +65,7 @@ const progressBarBox = (backgroundColor, top) => {
   return {
     position: 'absolute',
     top: top ? top : 0,
-    zIndex: 10001,
+    zIndex: 10000001,
     width: '100%',
     backgroundColor: backgroundColor ? backgroundColor : 'white',
     justifyContent: 'center',

@@ -1,6 +1,0 @@
-module Pods_RNScreenProgressBar {
-  umbrella header "Pods-RNScreenProgressBar-umbrella.h"
-
-  export *
-  module * { export * }
-}
