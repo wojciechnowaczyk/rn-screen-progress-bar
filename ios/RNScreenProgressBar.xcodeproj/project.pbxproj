@@ -165,7 +165,6 @@
 				00E356EA1AD99517003FC87E /* Sources */,
 				00E356EB1AD99517003FC87E /* Frameworks */,
 				00E356EC1AD99517003FC87E /* Resources */,
-				9F78F9D3B92E621F87E737E8 /* [CP] Embed Pods Frameworks */,
 				3AED5769A887BE987AC5A67D /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
@@ -188,7 +187,6 @@
 				13B07F8C1A680F5B00A75B9A /* Frameworks */,
 				13B07F8E1A680F5B00A75B9A /* Resources */,
 				00DD1BFF1BD5951E006B06BC /* Bundle React Native code and images */,
-				9B0FBE211B6CF3481615FB8F /* [CP] Embed Pods Frameworks */,
 				E2ADAC535BC5799F16A3F24A /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
@@ -329,40 +327,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-RNScreenProgressBar-RNScreenProgressBarTests/Pods-RNScreenProgressBar-RNScreenProgressBarTests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		9B0FBE211B6CF3481615FB8F /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-RNScreenProgressBar/Pods-RNScreenProgressBar-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-RNScreenProgressBar/Pods-RNScreenProgressBar-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-RNScreenProgressBar/Pods-RNScreenProgressBar-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		9F78F9D3B92E621F87E737E8 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-RNScreenProgressBar-RNScreenProgressBarTests/Pods-RNScreenProgressBar-RNScreenProgressBarTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-RNScreenProgressBar-RNScreenProgressBarTests/Pods-RNScreenProgressBar-RNScreenProgressBarTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-RNScreenProgressBar-RNScreenProgressBarTests/Pods-RNScreenProgressBar-RNScreenProgressBarTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		E2ADAC535BC5799F16A3F24A /* [CP] Copy Pods Resources */ = {
